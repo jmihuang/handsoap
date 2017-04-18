@@ -1,0 +1,748 @@
+@include at-breakpoint($pad) {
+	.container {   
+		@include container;
+		//@include susy-grid-background;
+		width:initial;
+	}
+
+	.content{
+		@include span-columns(12);
+		#news_all li{
+			@include transition(all 1s);
+			@include isolate-grid(4);
+			width:49%;
+			height:em(300px);
+			border:brown 1px solid;
+		}
+	}
+	.wraper{
+		width:initial;
+		margin:15px auto;
+	}
+    .top_nav{
+    	display:$disnone;
+	 }	
+
+	header{
+		position:fixed;
+		height:em(70px);
+		@include bg("navbar_bg01.gif",no-repeat,bottom right);
+		top:0;
+		left:0;
+		z-index:300;
+		background-color:#f7f7f7;
+		.loginbox{
+			display:none;
+		}
+		.top_nav{
+			display:none;
+		}
+		nav{	
+			width:100%;
+			margin:0 auto;
+			height:em(73px);
+			display:block;
+			position:relative;
+			z-index:100;
+		}
+		 .icon-bars{
+		 	display:$disblock;
+				position:absolute;
+				background-color:#fff;
+				right:20px;
+				top:20px;
+		 	padding:em(12px) em(15px);
+		 	@include border-radius(5px);
+		 	border:solid 1px #DDDDDD;
+		 }
+		 
+		 #headmenu{
+		 	 @include box-shadow(#666 0 5px 8px);
+		 	display:none;
+		 	width:100%;
+		 	right: 0;
+		 	top: 70px; 
+		 	.s-login{
+		 		display:$disblock;
+		 		background-color:#F7CE3E;
+		 	}
+		 	li{
+		 		a{
+		 			font-size:em(16px);
+		 			padding:0;
+
+		 		}
+		 		display:block;
+		 		background-color:#F7F7F7;
+		 		border-bottom:solid 1px #D1D1D1;
+		 		border-top:solid 1px #fff;
+		 		ul{
+		 			display:none;
+		 		}
+	 			&:hover{
+	  	            background-color:#FFF10E;
+	  	            background-image:initial;
+	 			} 	
+		 	}
+		 }
+	} 	
+	.newitem{
+		position:initial;
+		height:inherit;
+		@include clearfix;
+		ul{
+			width:100%;
+			position:initial;
+		}
+		ul li{
+			@include transition(all 1s);
+			@include isolate-grid(4);
+			widht:initial;
+			height:300px;
+			margin-bottom:em(28px);
+			left:0;
+			padding:0 10px;
+			box-sizing: border-box;
+		}
+		.preimg{
+			display:$disnone;
+		}
+		.nextimg{
+			display:$disnone;
+		}
+	}
+	.map{
+		width:100%;
+		.mapspot{
+			width:100%;
+			padding-top:em(130px);
+		}
+		.mapic{
+			position:absolute;
+			background:inherit;
+			background-color:#fff;
+			padding:0;
+			width:100%;
+			display:block;
+			height:em(45px);
+			left:0;
+			top:em(83px);
+			border:solid 1px #E5E5E5;
+			ul{
+				display:block;
+			}
+			ul li{
+				@include isolate-grid(3);
+				display:inline-block;
+				font-size:em(14px);
+				padding:em(14px) 0 em(14px) em(50px);
+				letter-spacing:em(3px);
+				box-sizing:border-box;
+			}
+			.mapic1{
+				@include bg("iconlist_1.jpg",no-repeat,0 0);
+			}
+			.mapic2{
+				@include bg("iconlist_2.jpg",no-repeat,0 0);
+			}
+			.mapic3{
+				@include bg("iconlist_3.jpg",no-repeat,0 0);
+			}
+			.mapic4{
+				@include bg("iconlist_4.jpg",no-repeat,0 0);
+			}
+
+		}
+		.mawea{
+				position: absolute;
+				right: 0;
+				top: 0;
+				line-height: 1.6em;
+				width: 100%;
+				background-color: #E5E5E5;
+				background-image:none;
+				height:em(83px);
+				padding:0;
+		}
+		.calen{
+			width:40%;
+			right: 0;
+			bottom:0;
+			left:inherit;
+
+		}
+		.degree{
+			font-size:em(24px);
+			color: #ffffff;
+			@include opacity(0.5);
+			z-index:100;
+			position:absolute;
+			right:em(55px);
+			left:inherit;
+			top:em(8px);
+		}
+		.map_search {
+			display:block;
+
+			width:50%;
+
+			margin:em(10px) 0 em(10px) em(10px);
+			text-align:right;
+			i{
+				cursor:pointer;
+				color:#FFD540;
+				display:inline-block;
+				float:right;
+				vertical-align:bottom;
+				&:hover{
+					color:#FFB81F;
+				}
+			}
+			input{
+				float:left;
+			}
+		}
+		.maplink{
+			width:58%;
+			float:left;
+			margin-left:em(18px);
+			height:1.8em;
+
+		}
+		#map-canvas{
+			width: 640px;
+			height: 500px;
+			display: inline-block;
+			position: absolute;
+			left: 0;
+			bottom:0;
+		}
+
+	}
+	.serviceitem{
+		display:block;
+		@include border-radius(5px);
+		border:solid 1px $borderline;
+		padding:em(20px) 0;
+		font-weight:bold;
+		h1{
+			width:100%;
+			font-size:(16px);
+			padding-top:em(10px);
+			padding-left:em(5px);
+			padding-bottom:em(5px);
+			margin-right:em(30px);
+			border-top:solid 3px #FFD84A;
+			display:inline-block;
+			float:left;
+			margin-top:em(30px);
+		}
+		ul li{
+			font-size:em(12px);
+			display:inline-block;
+			text-align:bottom;
+			padding-top:em(90px);
+			@for $i from 1 through 6{
+			&.seritem#{$i}{
+					@include bg("service-#{$i}.jpg",no-repeat,0 0);
+				}
+			}
+			
+		}
+	}
+	.stepitem{
+		display:block;
+		@include border-radius(5px);
+		padding:em(10px) em(20px) em(20px) em(20px);
+		font-weight:bold;
+		h1{
+			width:100%;
+			padding-top:em(10px);
+			padding-left:em(5px);
+			padding-bottom:em(5px);
+			margin:0 0 em(10px) 0;
+			border:none;
+			border-bottom:solid 3px #FFD84A;
+			float:left;
+		}
+		ul li{
+			@include isolate-grid(3);
+			font-size:em(12px);
+			display:inline-block;
+			position:relative;
+			padding-bottom:15px;
+			@for $i from 1 through 4{
+				&.seritem#{$i}{
+					div{
+						width:100%;
+						display:block;
+						text-align:center;
+						padding-left:20px;
+						position:absolute;
+						bottom:0px;
+					}
+				}
+			}
+			
+		}
+	}
+	.visitors{
+		width:inherit;
+		height:inherit;
+		background-color:#F4F3F1;
+		ul{
+			width:inherit;
+			margin:0 auto;
+		}
+		ul li{
+			display:inline-block;
+			@for $i from1 through 3{
+				&.vistitem#{$i}{
+					@include bg("vistor-#{$i}.png",no-repeat,left center);
+					padding:em(10px) em(20px) em(10px) em(40px);
+				}
+			}
+		}
+		.socialitem{
+			float:right;
+			height:em(38px);
+			padding-top:0;
+			li{
+				margin-right:em(6px);
+			}
+		}
+	}
+	.footer{
+		width:inherit;
+		footer{
+			width:inherit;
+			margin:em(20px);
+			border:sold 1px gray;
+			//@include susy-grid-background;
+				ul{
+					float:left;
+					margin-right:em(15px);
+					h1{
+						color:#fff;
+						font-size:em(15px);
+						font-weight:bold;
+						padding-left:em(10px);
+						margin-top:em(22px);
+						margin-bottom:em(24px);
+						border-left:$yellowcolor 3px solid;
+					}
+
+					.appdlink{
+						width:120px;
+					}
+					.fblink{
+						display:$disnone;
+					}
+
+				}
+				.floatR{
+					@include span-columns(12);
+				}
+				.floatR ul{
+					@include isolate-grid(3);
+				}
+
+				.footer1{
+					padding:em(30px)  0  em(10px) em(150px) ;
+					width:100%;
+					margin-right:0;
+					li{
+						float:left;
+						padding-left:0;
+						margin-bottom:em(4px);
+						@include isolate-grid(2);
+						a{
+							font-size:em(15px);
+							color:$yellowcolor;
+							&:hover{
+								color:$yellowcolor;
+							}
+						}
+					}
+				}
+				.footer5{
+					margin-right:0;
+				}
+
+				.contactitem{
+					font-size:em(11px);
+					line-height:em(24px);
+					color:#969696;
+					padding:em(35px) 0 em(15px) 0;
+					display:block;
+					clear:left;
+					span{
+						display:inline-block;
+					}
+					.copyright{
+						float:right;
+						margin-top:em(-11px);
+						img{
+							padding-right:em(15px);
+							float:left;
+
+						}
+						p{
+							display:block;
+							line-height:em(60px);
+							clear:left;
+
+						}
+					}
+					a{
+						color:#969696;
+						&:hover{
+								color:#fff;
+								text-decoration:underline;
+							}
+					}
+					
+				}
+		}
+		
+	}
+	
+	//other pages
+		.ad{
+			height:em(143px);
+		}
+
+		.page_menu{
+			.news_bottom{
+				width:inherit;
+			}
+		}
+		.title{
+			width:100%;
+			height:50px;
+			.tinam{
+				font-weight:bold;
+				font-size:em(18px);
+				height:em(24px);
+				float:left;
+				display:inline-block;
+				line-height:em(24px);
+				padding:0 em(8px) em(2px) em(8px);
+				border-bottom:#FFCC33 3px solid;
+			}
+			.paging{
+				font-size:em(13px);
+			}
+		}
+
+	//場站
+	aside{
+		width:initial;
+		display:block;
+		float:initial;
+		@include clearfix;
+		margin-bottom:em(20px);
+		.site-ad{
+			display:$disnone;
+		}
+	};
+	.areacheck{
+		width:49%;
+		float:right;
+		display:inline-block;
+	};
+	.areaselect{
+		width:49%;
+		float:left;
+		display:inline-block;
+	};
+	.right{
+		width:initial;
+		float:initial;		
+	}
+
+	//服務中心資訊
+	.service_stop>li{
+		box-sizing: border-box;
+		width:initial;
+		@include transition(all 1s);
+		@include isolate-grid(6);
+			h1{
+				width:72%;
+			}
+		}
+	//大事記
+	.milestoneL{
+		@include bg("icon_time01_over.gif", no-repeat,center left);
+		width:initial;
+		padding-left:70px;
+		font-weight:bold;
+	}
+	.milestoneR{
+		width:99%;
+		border:none;
+		.ycircle{
+			display:none;
+		}
+		.icon-arrow-down{
+			float:right;
+		}
+		.milelist{
+			width:90%;
+		}
+
+	}
+
+		
+	//設備介紹
+		.kila{
+			width:100%; 
+			margin:0 auto;
+			padding-top:100px;
+		}
+
+		.ubikepart{
+			border-bottom:dotted 2px $border_ycolor;
+			.alignleft{
+				text-align:left;
+			}
+			.alignright{
+				text-align:left;
+			}
+			.aligncenter{
+				text-align:left;
+			}
+			.margin160{
+				margin:0 0 0 0;
+			}
+			.marginR{
+				margin-top:60px;
+				margin-right:230px;
+			}
+			.imgright2{
+				float:right;
+			}
+		}
+		.guideinfo{
+			position:static;
+			span{
+				display:block;
+				height:100%;
+				width:100%;
+				margin:0 auto;
+				@include clearfix;
+				img{
+					background-color:rgba(255,255,255,0.6)
+				}
+			}
+		}
+
+		ul.guideside{
+			display:$disnone;
+		}
+		.hidebox{
+			display:$disnone;
+		}
+		.guidenone{
+			display:$disnone;
+		}
+		.partmar{
+			margin-top:0;
+		}
+		.partmarb{
+			margin-bottom:0;
+		}
+		.ubikepart{
+			.partdown{
+				img{
+					display:none;
+					border:solid 1px black;
+				}
+			}
+		}
+
+	//租還方式
+	.rent1{
+		position:relative;
+		
+		.rentxt{
+			width:50%;
+			position:absolute;
+			top:26%;
+			right:0;
+			line-height:26px;
+			div{
+				width:80%;
+				float:right;
+			}
+			h1{
+				font-size:em(22px); 
+				margin-bottom:em(10px);
+				font-weight:bold;
+			}
+			h2{
+				width:20%;
+				font-size:em(80px); 
+				color:#977901;
+				padding-top:18px;
+				float:left;
+			}
+		}
+
+	}
+
+	.rent2{
+		position:relative;
+		
+		.rentxt{
+			width:50%;
+			position:absolute;
+			top:26%;
+			left:0;
+			line-height:26px;
+			div{
+				width:80%;
+				float:right;
+			}
+			h1{
+				font-size:em(22px); 
+				margin-bottom:em(10px);
+				font-weight:bold;
+			}
+			h2{
+				width:20%;
+				font-size:em(80px); 
+				color:#977901;
+				padding-top:18px;
+				float:left;
+			}
+		}
+		
+	}
+
+	//費率說明
+		.ratetable{
+			td:not(:last-child){
+				border:solid 4px #fff;
+			}
+		}
+	
+	//分類列表
+
+		.faqsearchbox{
+			width:100%;
+			//padding-bottom:35px;
+			//border-bottom:dotted 1px $border_ycolor;
+			button{
+				margin:30px 4px 0 0;
+				display:inline-block;
+				width:40%;
+			}
+		}
+		.faqsearch{
+			width: 90%;
+			input[type='search']{
+				width:80%;
+			}
+
+		}
+
+		.faqunderR{
+			h1{
+				line-height:em(24px);
+			}
+			.faqtQ,.faqtA{
+				font-size: 18px;
+			}
+
+		}
+		.faqppup{
+			width:100%;
+		}
+
+
+		//會員服務
+			
+
+			.registwrap{
+				width:100%;
+				margin:0 auto;
+			}
+
+			.registercont{
+				width:99%;
+				h1{
+					margin-right:10px;
+					padding:50px 0;
+				}
+				h2{
+					float:initial;
+					margin-left:0;
+					padding-top:3%;
+					padding-right:3%;
+				}
+				h3{
+					float:initial;
+					padding-top:3%;
+					padding-right:3%;
+				}
+			}
+
+			.registerannu{
+				height:50%;
+			}
+			.regiscenter{
+				width:90%;
+			}
+	//註冊第1頁
+	.regisinput{
+		padding-left:25%;
+	}
+	.regiscenter{
+		width:100%;
+	}
+
+	.resiter1box{
+		width:100%;
+		}
+	.mobilerecord{
+		display:block;
+		li{
+			margin:2px;
+
+		}
+		li:nth-child(even){
+			background-color:#F3F3F3;
+		}
+		span{
+			width:40%;
+			display:inline-block;
+			padding:5px;
+		}
+		span:first-child{
+			background-color:$hover_ycolor;;
+		}
+		border:solid 4px #DDD;
+		margin-bottom:15px;
+	}
+	.f64record{
+		display:none;
+	}
+
+
+	.linkco{
+		@include container; 
+		li{
+			@include isolate-grid(4);
+			margin-right:none;
+			img{
+				padding:0px;
+			}
+			p{
+				text-align:left;
+			}
+		}
+
+	}
+
+}

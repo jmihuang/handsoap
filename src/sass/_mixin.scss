@@ -1,0 +1,24 @@
+@mixin bg($img){
+	background: url("../images/#{$img}");  
+	width: image-width("dist/images/#{$img}");  
+	height: image-height("dist/images/#{$img}");  
+} 
+
+@mixin pic-w-h($img){ 
+	width: image-width("dist/images/#{$img}");  
+	height: image-height("dist/images/#{$img}");  
+} 
+
+
+@mixin border-radius($angle){
+	border-radius:$angle;
+	-webkit-border-radius:$angle;
+	-moz-border-radius:$angle;
+}
+
+@mixin text-hide{
+	white-space:nowrap;
+	text-indent:100%;
+	overflow:hidden;
+}
+

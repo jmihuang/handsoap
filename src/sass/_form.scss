@@ -1,0 +1,44 @@
+// Form
+// ==========================================================================
+
+.form{
+  font-family: $font-family;
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  text-align: left;
+    label{
+      line-height:line-height(1);
+    }
+    .required{
+      color:colors('warning');
+      padding:0 6px;
+    }
+
+}
+
+.form input[type=text],.form input[type=password],textarea {
+  font-family: $font-family;
+  letter-spacing: 2px;
+  outline: solid 2px #fff;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px 15px 15px 30px;
+  box-sizing: border-box;
+  font-size: 14px;
+  @include transition-property(all);
+  @include transition-duration(.3s);
+}
+
+.form button:hover,.form button:active,.form button:focus {
+  background: darken(colors('sencondary-green'),10%);
+}
+
+.form input[type=text]:focus,.form input[type=password]:focus,.form textarea:focus{
+  outline: solid 2px colors('main-yellow');
+}
+
+
+

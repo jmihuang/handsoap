@@ -1,0 +1,121 @@
+
+.index_header_bg{
+    background:url('../images/header-bg.png') no-repeat center top;
+    height: 500px;
+    @include background-size(cover);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.index_header{
+    margin-top:$navbar-height;
+    padding:200px 0;
+    text-align:center;
+}
+@media #{$medium-and-down} {
+    .index_header{
+        margin-top:$navbar-height-mobile;
+    }
+}
+
+.main_slogan{
+    font-size:120px;
+    color:colors('main-yellow');
+    font-family:'Pinyon Script', cursive;
+}
+
+.main_desc{
+    color:lighten(colors('main-gray'),30%);
+}
+
+
+
+.contact{
+  margin-top: $base-line-height * 3;
+  background-color:#fff;
+}
+
+.contact_filed{
+    position: relative;
+    .errmsg{
+      font-family: $font-family;
+      position:absolute;
+      top:60px;
+      right:20px;
+      @include type-setting(-1);
+      color: colors('warning');
+      border-radius: 4px;
+      *{
+        display:inline-block;
+      }
+    }
+}
+
+
+.index_gallery{
+  li{
+    margin-bottom:$base-font-size * 2;   
+    cursor:pointer;
+    @include transition-property(all);
+    @include transition-duration(.5s);
+    img{
+      @include transition-property(all);
+      @include transition-duration(.5s);
+      @include transition-timing-function(ease-in);
+    }
+
+    figure{
+      position:relative;
+      overflow:hidden;
+      .index_gallery_title{
+        position:absolute;
+        left:20px;
+        bottom:-10px;
+        color:white;
+        z-index:2;
+        opacity:0;
+        @include transition-property(all);
+        @include transition-duration(.3s);
+      }
+      &::before{
+        content: 'attr(alt)';
+        height: 100%;
+        left: 0px;
+        opacity: .2;
+        position: absolute;
+        background-color:darken(colors('main-gray'),30%);
+        top: 0px;
+        width: 100%;
+        z-index: 1;
+        @include transition-property(all);
+        @include transition-duration(.5s);
+      }
+      &:hover {
+        img{
+          @include transform(scale(1.1));
+        }
+        &::before{
+           opacity: .6;
+        }
+        .index_gallery_title{
+             opacity:1;
+             bottom:30px;
+        }
+      }
+
+    }
+
+  }
+}
+
+@media #{$medium-and-down} {
+  .gallery{
+    li{
+      padding:0 0 !important;
+    }
+  }
+}
+
+
+
+

@@ -1,0 +1,41 @@
+
+.log_bg{
+  background-color:colors('main-gray');
+}
+.login_page {
+  max-width: 360px;
+  padding:4rem 3rem;
+  margin:10% auto 0 auto;
+}
+.login_remeber{
+  font-size:$base-font-size * 0.8;
+  color:colors('main-gray');
+}
+.login_filed{
+  position:relative;
+}
+.login_filed .prepic{
+  color:colors('main-gray');
+  position:absolute;
+  top:18px;
+  left:10px;
+}
+
+.login_filed .errmsg{
+  font-family: $font-family;
+  position:absolute;
+  top:13px;
+  right:10px;
+  @include type-setting(-1);
+  color: colors('warning');
+  border-radius: 4px;
+  *{
+    display:inline-block;
+  }
+}
+
+.welcome_login{
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 16px;
+}

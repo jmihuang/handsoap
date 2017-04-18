@@ -1,0 +1,25 @@
+
+.logoSvg{
+    position:fixed; 
+    display:none;
+    top:0; 
+    left:0; 
+    right:0; 
+    bottom:0; 
+    background-color:#545252;
+    z-index:2000;
+    text-align:center;
+    padding-top:150px;
+    @include animation(fadeOut 1s linear 1s forwards);
+}
+
+@include keyframes(fadeOut) {
+  0% {
+     opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }  
+}
+

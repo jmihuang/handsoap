@@ -1,0 +1,18 @@
+  .dialog{
+    display:none;
+    max-width: 400px;
+    text-align:center;
+    line-height: 24px;
+    padding:100px;
+    background-color:#fff;
+    margin:10% auto 0 auto;
+    box-sizing:border-box;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+
+  .alert_btn:hover,.alert_btn:active,.alert_btn:focus {
+    background: darken(colors('main-yellow'),10%);
+  }
+  .alert_btn {
+    margin-top:15px;
+  }

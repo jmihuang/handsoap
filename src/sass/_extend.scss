@@ -1,0 +1,26 @@
+%input{
+	input[type=text],input[type=password]{
+		outline:none;
+		padding:7px;
+		margin-bottom:15px;
+		width:90%;
+        @include box-sizing(border-box);
+        border: solid 1px #ffd540;
+	}
+}
+
+
+@mixin bg($bgimg,$bgrep,$bgpos) {
+	background:url("../images/#{$bgimg}") $bgrep $bgpos;
+}
+
+
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}
+
+@mixin text-hide{
+	white-space:nowrap;
+	text-indent:100%;
+	overflow:hidden;
+}

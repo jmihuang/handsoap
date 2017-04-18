@@ -1,0 +1,30 @@
+
+ul.sidebar{
+  li{
+        position:relative;
+        border-bottom:solid 1px lighten(colors('main-gray'),60%); 
+        &::before{
+          content:'';
+          width: 0;
+          height: 0;
+          position: absolute;
+          top:18px;
+          border-style: solid;
+          border-width: 6px 0px 6px 6px; 
+          border-color: transparent transparent transparent colors('main-yellow') ; 
+        }
+      a{
+          display:block;
+          padding:1rem;
+          &:hover{
+            color:colors('main-yellow');
+          }
+      }
+
+  }
+
+}
+
+
+
+
