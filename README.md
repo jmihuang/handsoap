@@ -2,7 +2,7 @@
 ## 前台
 http://jmiworkspace.byethost7.com/
 ## 後台
-http://jmiworkspace.byethost7.com/admin.php
+http://jmiworkspace.byethost7.com/admin/index.php
 帳號 aaa
 密碼 1qaz2wsx
 
